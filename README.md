@@ -110,7 +110,7 @@ root     11428  0.0  0.0 110280   844 pts/0    S+   06:08   0:00 grep LLGCM_Push
 ChangeLog
 -------------
 
-#ver 0.0.1 (2014/08/04)
+ver 0.0.1 (2014/08/04)
 * first commit
 
 MIT License
