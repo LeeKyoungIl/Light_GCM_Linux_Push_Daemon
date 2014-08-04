@@ -107,4 +107,13 @@ root      2417 18.7  0.2 161140  2088 ?        Ss   06:08   0:00 ./LLGCM_Push_Da
 root     11428  0.0  0.0 110280   844 pts/0    S+   06:08   0:00 grep LLGCM_Push_Daemon
 ```
 
-#Over
+ChangeLog
+-------------
+
+#ver 0.0.1 (2014/08/04)
+* first commit
+
+MIT License
+-------------
+
+Copyright (c) 2014 Lee Kyoung Il. See LICENSE.txt for details.
