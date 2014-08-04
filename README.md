@@ -9,6 +9,7 @@ Requirements
 
 * Linux Server (I recommend AWS t1.micro for testing.)
 * MySQL Server instance (version 5.x later.)
+* Linux gcc, curl library (Linux general) 
 
 How to Install?
 -------------
@@ -61,3 +62,49 @@ db_schema]# mysql -h 127.0.0.1 -u push -p push_center < table_schema.sql
 ```
 
 Ready Complete to Use Database.
+
+* gcc, curl library install part
+
+1) Install gcc and curl-devel 
+```bash
+# yum install gcc curl-devel
+```
+
+Ready to compile to Daemon end.
+
+* Compile daemon
+
+1) find libmysqlclient.so path
+```bash
+# find / -name libmysqlclient.so
+/usr/lib64/mysql/libmysqlclient.so
+```
+
+2) compile Daemon
+```bash
+# gcc -o LLGCM_Push_Daemon LLGCM_Push_Daemon.c -lcurl -I/usr/include -L/usr/lib64/mysql/ -lmysqlclient -lm
+```
+
+```bash
+drwxr-xr-x 2 root root  4096 Aug  4 05:42 db_schema
+-rw-r--r-- 1 root root  5619 Aug  4 05:42 http_connect.c
+-rwxr-xr-x 1 root root 23107 Aug  4 06:08 LLGCM_Push_Daemon
+-rw-r--r-- 1 root root  4418 Aug  4 05:42 LLGCM_Push_Daemon.c
+-rw-r--r-- 1 root root  2745 Aug  4 05:52 mysql_connect.c
+-rw-r--r-- 1 root root  4932 Aug  4 05:42 push_util.c
+-rw-r--r-- 1 root root   565 Aug  4 05:42 README.md
+```
+
+3) execute Daemon
+```bash
+# LLGCM_Push_Daemon
+```
+
+4) check Daemon
+```bash
+# ps aux | grep LLGCM
+root      2417 18.7  0.2 161140  2088 ?        Ss   06:08   0:00 ./LLGCM_Push_Daemon
+root     11428  0.0  0.0 110280   844 pts/0    S+   06:08   0:00 grep LLGCM_Push_Daemon
+```
+
+#Over
