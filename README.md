@@ -13,19 +13,19 @@ Requirements
 How to Install?
 -------------
 
-1. Install MySQL Server and MySQL C Client library
+1) Install MySQL Server and MySQL C Client library
 
 ```bash
     yum install mysql-server mysql-devel
 ``` 
 
-2. Run MySQL Server
+2) Run MySQL Server
 
 ```bash
   /etc/rc.d/init.d/mysqld start
 ``` 
 
-3. Setting MySQL root info
+3) Setting MySQL root info
 
 ```bash
   /usr/bin/mysql_secure_installation
