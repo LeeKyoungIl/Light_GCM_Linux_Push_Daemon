@@ -8,13 +8,26 @@ Requirements
 -------------
 
 * Linux Server (I recommend AWS t1.micro for testing.)
-* MySQL instance (version 5.x later.)
+* MySQL Server instance (version 5.x later.)
 
 How to Install?
 -------------
 
-1. Install MySQL Server
+1. Install MySQL Server and MySQL C Client library
 
-.. code-block:: bash
-  yum install mysql-server
-  
+```bash
+    yum install mysql-server mysql-devel
+``` 
+
+2. Run MySQL Server
+
+```bash
+  /etc/rc.d/init.d/mysqld start
+``` 
+
+3. Setting MySQL root info
+
+```bash
+  /usr/bin/mysql_secure_installation
+``` 
+
