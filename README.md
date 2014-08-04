@@ -39,4 +39,25 @@ Query OK, 0 rows affected (0.00 sec)
 ```bash
 db_schema]# mysql -h 127.0.0.1 -u push -p push_center < table_schema.sql
 ```
-#Ready Complete to Use Database.
+6) Modify mysql_connect.c file (Light_GCM_Linux_Push_Daemon/mysql_connect.c)
+```c
+#include <mysql/mysql.h>
+
+/**
+ * MySQL connect info define
+ *
+ * - MYSQL_HOST : Insert MySQL server ip address or domain address
+ * - MYSQL_PORT : Insert MySQL server port (ex 3306)
+ * - MYSQL_USER : Insert MySQL user ID to use for server connection
+ * - MYSQL_PASS : Insert MySQL user password to use for server connection
+ * - MYSQL_DB : Insert MySQL DB name to use for push service
+ */
+#define MYSQL_HOST "127.0.0.1"
+#define MYSQL_PORT 3306
+#define MYSQL_USER "push"
+#define MYSQL_PASS "gcm"
+#define MYSQL_DB "push_center"
+
+```
+
+Ready Complete to Use Database.
