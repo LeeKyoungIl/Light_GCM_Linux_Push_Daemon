@@ -3,6 +3,8 @@ Light_GCM_Linux_Push_Daemon
 
 Linux Server Light Weight GCM (Google Cloud Messaging for Android) Push notification Daemon.
 
+Made by Simple ANSI-C language.
+
 
 Requirements
 -------------
